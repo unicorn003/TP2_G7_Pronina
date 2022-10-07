@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       TableMultiplication();
+       division();
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -105,5 +105,19 @@ public class Main {
             System.out.print("\n");
         }
     }
-
+    public static void division(){
+        Scanner scanner = new Scanner(System.in);
+        int entier;
+        do {
+            System.out.println("Veuillez saisir un entier positif ou nul");
+            entier = scanner.nextInt();
+        } while (entier < 0);
+        int denominateur;
+        do {
+            System.out.println("Veuillez saisir un dénominateur positif et non nul");
+            denominateur = scanner.nextInt();
+        } while (denominateur <= 0);
+        float division = (float) entier/denominateur;
+        System.out.println("Division de deux nombres est égal " + division);
+    }
 }
