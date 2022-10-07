@@ -12,23 +12,23 @@ public class Main {
         int b = scanner.nextInt();
         System.out.println("Quelle est la valeur de c ?");
         int c = scanner.nextInt();
-        int delta = (int) (Math.pow(b, 2) - 4 * a * c);
+        int delta = (int) (Math.pow(b, 2) - 4 * a * c); //Le discriminant est le carré du deuxième coefficient moins le produit de 4 par le premier coefficient par le troisième coefficient.
         if (delta < 0) {
             float x1 = (float)(Math.sqrt(-1*delta)-1*b)/(2*a);
             float x2 = (float)(-1*Math.sqrt(-1*delta)-1*b)/(2*a);
-            System.out.println("votre x1 est égal  " + x1);
-            System.out.println("votre x2 est égal  " + x2);
+            System.out.println("Votre x1 avec de i est égal avec de i  " + x1);
+            System.out.println("Votre x2 avec de i est égal  " + x2);
         }
         else if (delta == 0) {
 
             float x0 = (float)(-1*b)/(2*a);
-            System.out.println("votre x est égal  " + x0);
+            System.out.println("Votre x est égal  " + x0);
         }
         else {
             float x1 = (float)(Math.sqrt(delta)-1*b)/(2*a);
             float x2 = (float)(-1*Math.sqrt(delta)-1*b)/(2*a);
-            System.out.println("votre x1 est égal  " + x1);
-            System.out.println("votre x2 est égal  " + x2);
+            System.out.println("Votre x1 est égal  " + x1);
+            System.out.println("Votre x2 est égal  " + x2);
         }
     }
     public static void parite(){
@@ -71,12 +71,15 @@ public class Main {
         if (premiereChaine.equals(deuxiemeChaine))
             System.out.println("Vos lignes sont égal");
         else
-            System.out.println("Vos lignes sont égal");
+            System.out.println("Vos lignes sont pas égal");
     }
     public static void factorielle(){
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Saisir un entier positif ou nul");
-        int n = scanner.nextInt();
+        int n;
+        do {
+            System.out.println("Veuillez saisir un entier positif ou nul");
+            n = scanner.nextInt();
+        } while (n < 0);
         int factorielle = 1;
         for (int i = 1; i <= n; i++) {
             factorielle *= i;
@@ -144,4 +147,5 @@ public class Main {
         else
             System.out.println("nombre est premier");
     }
+
 }
