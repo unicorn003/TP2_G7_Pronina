@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       division();
+       nombrePremier();
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -119,5 +119,29 @@ public class Main {
         } while (denominateur <= 0);
         float division = (float) entier/denominateur;
         System.out.println("Division de deux nombres est égal " + division);
+    }
+    public static void regle(){
+        Scanner scanner = new Scanner(System.in);
+        int entier;
+        do {
+            System.out.println("Veuillez saisir un entier positif et not nul");
+            entier = scanner.nextInt();
+        } while (entier < 0);
+    }
+    public static void nombrePremier() {
+        Scanner scanner = new Scanner(System.in);
+        int nombre;
+        do {
+            System.out.println("Veuillez saisir un entier positif ou nul");
+            nombre = scanner.nextInt();
+        } while (nombre <= 0);
+        int k = 2; //déterminer le nombre minimal de diviseurs. Si nous en trouvons d'autres, nous augmentons ce nombre
+        for(int i = 2; i< nombre/2; i++) //Tous les diviseurs possibles d'un nombre sont dans la moitié d'un nombre, donc on passe en revue tous les diviseurs comme des entiers après 2
+            if (nombre % i == 0)
+                k++;
+        if (k > 2)
+            System.out.println("nombre n'est pas premier");
+        else
+            System.out.println("nombre est premier");
     }
 }
