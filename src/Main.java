@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       factorielle();
+       countdown();
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -82,5 +82,13 @@ public class Main {
             factorielle *= i;
         }
         System.out.println("Votre factorielle est égal  " + factorielle);
+    }
+    public static void countdown(){
+        int i = 10;
+        for(;i>=0;i--){
+            System.out.println(i);
+            if(i == 0)
+                System.out.println("BOOM!");
+        }
     }
 }
