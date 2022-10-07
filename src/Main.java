@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       countdown();
+       carres();
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -90,5 +90,12 @@ public class Main {
             if(i == 0)
                 System.out.println("BOOM!");
         }
+    }
+    public static void carres(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Quelle est la valeur de x ?");
+        int x = scanner.nextInt();
+        System.out.println("Vos valeurs sont égals");
+        System.out.println(x +"\t "+x*x);
     }
 }
