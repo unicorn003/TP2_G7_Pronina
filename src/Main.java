@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        max();
+        egaliteStr();
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -70,7 +70,7 @@ public class Main {
         String deuxiemeChaine = scanner.nextLine();
         if (premiereChaine.equals(deuxiemeChaine))
             System.out.println("Vos lignes sont égal");
-
-
+        else
+            System.out.println("Vos lignes sont égal");
     }
 }
