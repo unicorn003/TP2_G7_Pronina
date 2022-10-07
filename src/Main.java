@@ -104,7 +104,6 @@ public class Main {
                 System.out.print(i*j+"\t");
             System.out.print("\n");
         }
-
-
     }
+
 }
