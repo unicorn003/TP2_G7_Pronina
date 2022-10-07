@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       nombrePremier();
+       regle();
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -130,6 +130,14 @@ public class Main {
             System.out.println("Veuillez saisir un entier positif et not nul");
             entier = scanner.nextInt();
         } while (entier < 0);
+        String regle = "|";
+        int reste = entier % 10;
+        int douzaines = entier / 10;
+        for (int i = 0; i < douzaines; i++)
+            regle += "---------|";
+        for (int i = 0; i < reste; i++)
+            regle +="-";
+        System.out.println("Votre nombre avec des douzaines est \n" + regle);
     }
     public static void nombrePremier() {
         Scanner scanner = new Scanner(System.in);
@@ -147,5 +155,4 @@ public class Main {
         else
             System.out.println("nombre est premier");
     }
-
 }
