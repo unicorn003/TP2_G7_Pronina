@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        egaliteStr();
+       factorielle();
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -72,5 +72,15 @@ public class Main {
             System.out.println("Vos lignes sont égal");
         else
             System.out.println("Vos lignes sont égal");
+    }
+    public static void factorielle(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Saisir un entier positif ou nul");
+        int n = scanner.nextInt();
+        int factorielle = 1;
+        for (int i = 1; i <= n; i++) {
+            factorielle *= i;
+        }
+        System.out.println("Votre factorielle est égal  " + factorielle);
     }
 }
