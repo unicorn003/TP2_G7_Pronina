@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        initialisationTableau();
+        int[] table = new int[]{2,3,4,6};
+        inverseTableau(table);
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -187,5 +188,20 @@ public class Main {
             if (tableau[i] % 2 != 0)
                 System.out.print(tableau[i] + " ");
         }
+    }
+    public static void inverseTableau(int[] tableau){
+        int n = tableau.length;
+        int[] inverseTableau = new int[n];
+        n--;
+        int i = 0;
+        for( ; n >= 0; n--){
+            inverseTableau[i] = tableau[n];
+            i++;
+        }
+        for (int j = 0; j < tableau.length; j++)
+            System.out.print(tableau[j]+" ");
+        System.out.print("\n");
+        for(int k = 0; k < inverseTableau.length; k++)
+            System.out.print(inverseTableau[k]+" ");
     }
 }
