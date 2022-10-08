@@ -2,8 +2,19 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int[] table = new int[]{2,3,4,6};
-        inverseTableau(table);
+        System.out.print("Quel exercice ? Saisissez :\n" +
+                "1. Discriminant\n" +
+                "2. Parité d’un nombre\n" +
+                "3. Calcul d’extremum\n" +
+                "4. Égalité entre chaînes de caractères\n" +
+                "5. Factorielle\n" +
+                "6. Compte à rebous\n" +
+                "7. Valeurs de carrés\n" +
+                "8. Table de multiplication\n" +
+                "9. Division d’entiers\n" +
+                "10. Règle graduée\n" +
+                "11. Nombres premiers\n" +
+                "12. Manipulations sur un tableau\n");
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -102,7 +113,7 @@ public class Main {
         System.out.println("Vos valeurs sont égals");
         System.out.println(x +"\t "+x*x);
     }
-    public static void TableMultiplication(){
+    public static void tableMultiplication(){
         for (int i = 1; i < 11; i++){
             for (int j = 1; j < 11; j++)
                 System.out.print(i*j+"\t");
@@ -203,5 +214,55 @@ public class Main {
         System.out.print("\n");
         for(int k = 0; k < inverseTableau.length; k++)
             System.out.print(inverseTableau[k]+" ");
+    }
+    public static void menu(){
+        Scanner scanner = new Scanner(System.in);
+        int nombre;
+        do {
+            System.out.println("Veuillez saisir un entier positif entre de 1 et 12");
+            nombre = scanner.nextInt();
+        } while (nombre <= 0);
+        switch (nombre){
+            case 1 :
+                discriminant();
+                break;
+            case 2 :
+                parite();
+                break;
+            case 3:
+                max();
+                min();
+                break;
+            case 4:
+                egaliteStr();
+                break;
+            case 5:
+                factorielle();
+                break;
+            case 6:
+                countdown();
+                break;
+            case 7:
+                carres();
+                break;
+            case 8:
+                tableMultiplication();
+                break;
+            case 9:
+                division();
+                break;
+            case 10:
+                regle();
+                break;
+            case 11:
+                nombrePremier();
+                break;
+            case 12:
+                initialisationTableau();
+                break;
+            default:
+                int[] test  = new int[]{34,5,77,1,8,9,34,80,3,9};
+                inverseTableau(test);
+        }
     }
 }
