@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-       regle();
+        initialisationTableau();
     }
     public static void discriminant(){
         Scanner scanner = new Scanner(System.in);
@@ -154,5 +154,38 @@ public class Main {
             System.out.println("nombre n'est pas premier");
         else
             System.out.println("nombre est premier");
+    }
+    public static void initialisationTableau() {
+        int[] tableau = new int[10];
+        int somme = 0;
+        int min = tableau[0];
+        int max = tableau[0];
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < tableau.length; i++) {
+            System.out.println("Saisir un entier");
+            int entier = scanner.nextInt();
+            tableau[i] = entier;
+        }
+        for (int i = 0; i < tableau.length; i++){
+            if (tableau[i] > max)
+                max = tableau[i];
+            if (tableau[i] < min)
+                min = tableau[i];
+        }
+        System.out.println("Votre maximus est " + max);
+        System.out.println("Votre minimum est " + min);
+        for (int i = 0; i < tableau.length; i++) {
+            somme += tableau[i];
+        }
+        System.out.println("la somme de tableau est égal " + somme);
+        for (int i = 0; i < tableau.length; i++){
+            if (tableau[i] % 2 == 0)
+                System.out.print(tableau[i] + " ");
+        }
+        System.out.println("\n");
+        for (int i = 0; i < tableau.length; i++){
+            if (tableau[i] % 2 != 0)
+                System.out.print(tableau[i] + " ");
+        }
     }
 }
